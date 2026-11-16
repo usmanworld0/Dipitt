@@ -1,0 +1,28 @@
+{
+  "base": "http://127.0.0.1:3001",
+  "checks": [
+    "chipotle-sauce: mobile layout, pack images, back labels and PKR prices",
+    "sriracha-sauce: mobile layout, pack images, back labels and PKR prices",
+    "oyster-sauce: mobile layout, pack images, back labels and PKR prices",
+    "buffalo-hot-sauce: mobile layout, pack images, back labels and PKR prices",
+    "smokey-bbq-sauce: mobile layout, pack images, back labels and PKR prices",
+    "peri-peri-garlic: mobile layout, pack images, back labels and PKR prices",
+    "khatti-meethi-sauce: mobile layout, pack images, back labels and PKR prices",
+    "peri-peri-lemon-herb: mobile layout, pack images, back labels and PKR prices",
+    "peri-peri-hot: mobile layout, pack images, back labels and PKR prices",
+    "sweet-thai-chilli-sauce: mobile layout, pack images, back labels and PKR prices",
+    "hot-sauce: mobile layout, pack images, back labels and PKR prices",
+    "buffalo-sauce: mobile layout, pack images, back labels and PKR prices",
+    "korean-hot-sauce: mobile layout, pack images, back labels and PKR prices",
+    "worcestershire-sauce: mobile layout, pack images, back labels and PKR prices",
+    "pizza-sauce: mobile layout, pack images, back labels and PKR prices",
+    "mint-sauce: mobile layout, pack images, back labels and PKR prices",
+    "pasta-sauce: mobile layout, pack images, back labels and PKR prices",
+    "peri-peri-medium: mobile layout, pack images, back labels and PKR prices",
+    "habanero-sauce: mobile layout, pack images, back labels and PKR prices",
+    "tobasco-sauce: mobile layout, pack images, back labels and PKR prices",
+    "mango-habanero-sauce: mobile layout, pack images, back labels and PKR prices",
+    "peri-peri-mild: mobile layout, pack images, back labels and PKR prices"
+  ],
+  "errors": []
+}

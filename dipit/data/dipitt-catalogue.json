@@ -1,0 +1,377 @@
+[
+  {
+    "id": "chipotle-sauce",
+    "name": "Chipotle Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 500,
+        "image": "/assets/dipitt/chipotle-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/chipotle-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/chipotle-sauce-300-g",
+        "available": true
+      },
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 225,
+        "image": "/assets/dipitt/chipotle-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/chipotle-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/chipotle-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "sriracha-sauce",
+    "name": "Sriracha Sauce",
+    "variants": [
+      {
+        "size": 490,
+        "unit": "g",
+        "price": 505,
+        "image": "/assets/dipitt/sriracha-sauce-510-g-front.webp",
+        "backImage": "/assets/dipitt/sriracha-sauce-510-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/sriracha-sauce-510-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "oyster-sauce",
+    "name": "Oyster Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 500,
+        "image": "/assets/dipitt/oyster-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/oyster-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/oyster-sauce-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "buffalo-hot-sauce",
+    "name": "Buffalo Hot Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 450,
+        "image": "/assets/dipitt/buffalo-hot-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/buffalo-hot-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/buffalo-hot-sauce-300-g",
+        "available": true
+      },
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 225,
+        "image": "/assets/dipitt/buffalo-hot-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/buffalo-hot-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/buffalo-hot-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "smokey-bbq-sauce",
+    "name": "Smokey BBQ Sauce",
+    "variants": [
+      {
+        "size": 400,
+        "unit": "g",
+        "price": 420,
+        "image": "/assets/dipitt/smokey-bbq-sauce-400-g-front.webp",
+        "backImage": "/assets/dipitt/smokey-bbq-sauce-400-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/smokey-bbq-sauce-400-g",
+        "available": true
+      },
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 380,
+        "image": "/assets/dipitt/smokey-bbq-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/smokey-bbq-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/smokey-bbq-sauce-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "peri-peri-garlic",
+    "name": "Peri Peri Garlic",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 475,
+        "image": "/assets/dipitt/peri-peri-garlic-300g-front.webp",
+        "backImage": "/assets/dipitt/peri-peri-garlic-300g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/peri-peri-garlic-300g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "khatti-meethi-sauce",
+    "name": "Khatti Meethi Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "ml",
+        "price": 400,
+        "image": "/assets/dipitt/khatti-meethi-sauce-300ml-front.webp",
+        "backImage": "/assets/dipitt/khatti-meethi-sauce-300ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/khatti-meethi-sauce-300ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "peri-peri-lemon-herb",
+    "name": "Peri Peri Lemon & Herb",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 475,
+        "image": "/assets/dipitt/peri-peri-lemon-herb-300g-front.webp",
+        "backImage": "/assets/dipitt/peri-peri-lemon-herb-300g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/peri-peri-lemon-herb-300g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "peri-peri-hot",
+    "name": "Peri Peri Hot",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 475,
+        "image": "/assets/dipitt/peri-peri-hot-300-g-front.webp",
+        "backImage": "/assets/dipitt/peri-peri-hot-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/peri-peri-hot-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "sweet-thai-chilli-sauce",
+    "name": "Sweet Thai Chilli Sauce",
+    "variants": [
+      {
+        "size": 340,
+        "unit": "g",
+        "price": 375,
+        "image": "/assets/dipitt/sweet-thai-chilli-sauce-340-g-front.webp",
+        "backImage": "/assets/dipitt/sweet-thai-chilli-sauce-340-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/sweet-thai-chilli-sauce-340-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "hot-sauce",
+    "name": "Hot Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 400,
+        "image": "/assets/dipitt/hot-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/hot-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/hot-sauce-300-g",
+        "available": true
+      },
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 225,
+        "image": "/assets/dipitt/hot-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/hot-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/hot-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "buffalo-sauce",
+    "name": "Buffalo Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 450,
+        "image": "/assets/dipitt/buffalo-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/buffalo-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/buffalo-sauce-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "korean-hot-sauce",
+    "name": "Korean Hot Sauce",
+    "variants": [
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 375,
+        "image": "/assets/dipitt/korean-hot-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/korean-hot-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/korean-hot-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "worcestershire-sauce",
+    "name": "Worcestershire Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 425,
+        "image": "/assets/dipitt/worcestershire-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/worcestershire-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/worcestershire-sauce-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "pizza-sauce",
+    "name": "Pizza Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 375,
+        "image": "/assets/dipitt/pizza-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/pizza-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/pizza-sauce-300-g",
+        "available": true
+      },
+      {
+        "size": 400,
+        "unit": "g",
+        "price": 405,
+        "image": "/assets/dipitt/pizza-sauce-400-g-front.webp",
+        "backImage": "/assets/dipitt/pizza-sauce-400-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/pizza-sauce-400-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "mint-sauce",
+    "name": "Mint Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "ml",
+        "price": 400,
+        "image": "/assets/dipitt/mint-sauce-300ml-front.webp",
+        "backImage": "/assets/dipitt/mint-sauce-300ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/mint-sauce-300ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "pasta-sauce",
+    "name": "Pasta Sauce",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 375,
+        "image": "/assets/dipitt/pasta-sauce-300-g-front.webp",
+        "backImage": "/assets/dipitt/pasta-sauce-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/pasta-sauce-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "peri-peri-medium",
+    "name": "Peri Peri Medium",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 475,
+        "image": "/assets/dipitt/peri-peri-medium-300-g-front.webp",
+        "backImage": "/assets/dipitt/peri-peri-medium-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/peri-peri-medium-300-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "habanero-sauce",
+    "name": "Habanero Sauce",
+    "variants": [
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 225,
+        "image": "/assets/dipitt/habanero-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/habanero-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/habanero-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "tobasco-sauce",
+    "name": "Tobasco Sauce",
+    "variants": [
+      {
+        "size": 60,
+        "unit": "ml",
+        "price": 250,
+        "image": "/assets/dipitt/tobasco-sauce-60-ml-front.webp",
+        "backImage": "/assets/dipitt/tobasco-sauce-60-ml-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/tobasco-sauce-60-ml",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "mango-habanero-sauce",
+    "name": "Mango Habanero Sauce",
+    "variants": [
+      {
+        "size": 320,
+        "unit": "g",
+        "price": 375,
+        "image": "/assets/dipitt/mango-habanero-sauce-320-g-front.webp",
+        "backImage": "/assets/dipitt/mango-habanero-sauce-320-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/mango-habanero-sauce-320-g",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "peri-peri-mild",
+    "name": "Peri Peri Mild",
+    "variants": [
+      {
+        "size": 300,
+        "unit": "g",
+        "price": 475,
+        "image": "/assets/dipitt/peri-peri-mild-300-g-front.webp",
+        "backImage": "/assets/dipitt/peri-peri-mild-300-g-back.webp",
+        "sourceUrl": "https://www.dipitt.com/products/peri-peri-mild-300-g",
+        "available": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "base": "http://127.0.0.1:3001",
+  "checks": [
+    "bottle retains physical width at 90 degrees",
+    "front and back show different wrapped artwork",
+    "small-bottle renders as a textured 3D pack",
+    "squeeze-bottle renders as a textured 3D pack",
+    "pouch renders as a textured 3D pack",
+    "all 27 packs have matching rendered thumbnails",
+    "homepage swaps its poster for the live 3D carousel",
+    "carousel navigation remains working",
+    "rotation control changes the rendered side",
+    "keyboard rotation changes the rendered model",
+    "pack selection updates the model and price",
+    "3D pack selection adds the correct size and total to the bag",
+    "mobile 3D carousel has no horizontal overflow",
+    "mobile product renders a live squeeze bottle",
+    "drag rotates the 3D model on the mobile layout",
+    "no 3D runtime or shader errors"
+  ],
+  "errors": []
+}
