@@ -13,7 +13,8 @@
     "format": "prettier --write app components data sections scripts next.config.ts",
     "test:fallback": "node scripts/verify-fallback.mjs",
     "test:visual": "node scripts/visual-pass.mjs",
-    "test:3d": "node scripts/verify-3d.mjs"
+    "test:3d": "node scripts/verify-3d.mjs",
+    "test:startup": "node scripts/verify-startup.mjs after"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

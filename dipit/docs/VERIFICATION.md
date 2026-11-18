@@ -1,3 +1,13 @@
+# Startup performance update — 19 November 2026
+
+The carousel now mounts while the intro is still covering it. All five packs, including offscreen packs, have their shaders compiled and textures/buffers uploaded before reveal. GPU completion and three rendered frames gate the handoff; unsupported or stalled graphics use the existing model-render fallback.
+
+A fresh Edge session with 4x CPU throttling reproduced a 1,917 ms maximum frame gap after reveal before this change. With warmup, the maximum visible gap was 33 ms, with zero visible main-thread long tasks in the first 2.5 seconds. The fully prepared scene was ready before reveal. These are local controlled measurements, not a guarantee of frame rate on every device.
+
+Production build and TypeScript pass. Cold startup and immediate carousel navigation pass. All three WebGL-disabled fallback/404 checks pass. Reports: `docs/qa/startup-before.json` and `docs/qa/startup-after.json`. Reproduce with `npm.cmd run test:startup` and a running server; override its address with `DIPITT_TEST_URL`.
+
+---
+
 # DIPITT 3D verification
 
 Verified locally on 16 November 2026 with Microsoft Edge through Playwright against the production build at port 3001.

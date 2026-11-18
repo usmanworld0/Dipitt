@@ -5,10 +5,10 @@ import { featuredProducts as products, modelImage } from '@/data/products';
 import { useSite, SiteLink, type BottleOrigin } from '@/components/layout/SiteShell';
 const CarouselScene = dynamic(() => import('@/components/3d/CarouselScene'), { ssr: false });
 export default function HomeShowcase() {
-  const { navigateProduct, ready } = useSite();
+  const { navigateProduct, ready, markHomeReady } = useSite();
   const [hovered, setHovered] = useState<number | null>(null),
     [active, setActive] = useState(0),
-    [supported, setSupported] = useState(true),
+    [supported, setSupported] = useState<boolean | null>(null),
     [modelReady, setModelReady] = useState(false),
     [reduced, setReduced] = useState(false);
   const stage = useRef<HTMLElement>(null),
@@ -22,6 +22,20 @@ export default function HomeShowcase() {
       pointerY: 0,
     }),
     drag = useRef({ x: 0, last: 0, moved: false });
+  const sceneReady = useCallback(() => {
+    setModelReady(true);
+    markHomeReady();
+  }, [markHomeReady]);
+  const sceneFailed = useCallback(() => {
+    setSupported(false);
+    markHomeReady();
+  }, [markHomeReady]);
+  useEffect(() => {
+    if (!supported || modelReady) return;
+    // A failed asset or graphics driver must not keep the intro open indefinitely.
+    const timeout = window.setTimeout(sceneFailed, 15000);
+    return () => window.clearTimeout(timeout);
+  }, [supported, modelReady, sceneFailed]);
   const select = useCallback(
     (i: number, origin?: BottleOrigin) => {
       sessionStorage.setItem('dipitt-selected', products[i].id);
@@ -36,9 +50,13 @@ export default function HomeShowcase() {
     setReduced(matchMedia('(prefers-reduced-motion: reduce)').matches);
     try {
       const c = document.createElement('canvas');
-      setSupported(!!(c.getContext('webgl2') || c.getContext('webgl')));
+      const context = c.getContext('webgl2');
+      setSupported(!!context);
+      context?.getExtension('WEBGL_lose_context')?.loseContext();
+      if (!context) markHomeReady();
     } catch {
       setSupported(false);
+      markHomeReady();
     }
     const node = stage.current!;
     let wheelTotal = 0;
@@ -60,7 +78,7 @@ export default function HomeShowcase() {
       node.removeEventListener('wheel', wheel);
       clearInterval(id);
     };
-  }, []);
+  }, [markHomeReady]);
   const step = (d: number) => {
     motion.current.target = Math.round(motion.current.target) + d;
     setActive(((Math.round(motion.current.target) % 5) + 5) % 5);
@@ -140,13 +158,14 @@ export default function HomeShowcase() {
           </svg>
         </div>
         <div className="product-stage">
-          {ready && supported ? (
+          {supported ? (
             <CarouselScene
               motion={motion}
               onHover={setHovered}
               onSelect={select}
               reduced={reduced}
-              onReady={() => setModelReady(true)}
+              onReady={sceneReady}
+              onError={sceneFailed}
             />
           ) : null}
           {(!supported || !modelReady) && (

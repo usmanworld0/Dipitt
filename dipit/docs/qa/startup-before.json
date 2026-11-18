@@ -1,0 +1,51 @@
+{
+  "revealAt": 3064,
+  "canvasAt": 3897.4,
+  "modelAt": 7797.4,
+  "readyBeforeReveal": false,
+  "visibleLongTasks": [
+    {
+      "at": 3230.5,
+      "duration": 649
+    },
+    {
+      "at": 3989.199999988079,
+      "duration": 280
+    },
+    {
+      "at": 4333.199999988079,
+      "duration": 165
+    },
+    {
+      "at": 4499.099999964237,
+      "duration": 63
+    },
+    {
+      "at": 4569.199999988079,
+      "duration": 93
+    },
+    {
+      "at": 4662.199999988079,
+      "duration": 76
+    },
+    {
+      "at": 4762.799999952316,
+      "duration": 128
+    },
+    {
+      "at": 4996.899999976158,
+      "duration": 97
+    },
+    {
+      "at": 5240.5,
+      "duration": 108
+    },
+    {
+      "at": 5456.599999964237,
+      "duration": 183
+    }
+  ],
+  "maxVisibleTaskMs": 649,
+  "maxVisibleFrameGapMs": 1916.8000000000002,
+  "errors": []
+}

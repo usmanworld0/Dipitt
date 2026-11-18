@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import { featuredProducts as products } from '@/data/products';
 import { Bottle } from './Bottle';
 import { Lighting } from './Lighting';
+import { SceneWarmup } from './SceneWarmup';
 type Motion = {
   current: number;
   target: number;
@@ -95,18 +96,8 @@ function CarouselBottle({
     </group>
   );
 }
-function MotionDriver({
-  motion,
-  reduced,
-  onReady,
-}: {
-  motion: React.RefObject<Motion>;
-  reduced: boolean;
-  onReady?: () => void;
-}) {
-  const frames = useRef(0);
+function MotionDriver({ motion, reduced }: { motion: React.RefObject<Motion>; reduced: boolean }) {
   useFrame((_, delta) => {
-    if (++frames.current === 2) onReady?.();
     const dt = Math.min(delta, 0.05);
     motion.current.current = THREE.MathUtils.damp(
       motion.current.current,
@@ -124,12 +115,14 @@ export default function CarouselScene({
   onSelect,
   reduced,
   onReady,
+  onError,
 }: {
   motion: React.RefObject<Motion>;
   onHover: (i: number | null) => void;
   onSelect: (i: number, origin?: BottleOrigin) => void;
   reduced: boolean;
   onReady?: () => void;
+  onError?: () => void;
 }) {
   return (
     <Canvas
@@ -139,7 +132,7 @@ export default function CarouselScene({
       gl={{ alpha: true, antialias: true, powerPreference: 'high-performance' }}
     >
       <Lighting />
-      <MotionDriver motion={motion} reduced={reduced} onReady={onReady} />
+      <MotionDriver motion={motion} reduced={reduced} />
       {products.map((p, i) => (
         <CarouselBottle
           key={p.id}
@@ -150,6 +143,7 @@ export default function CarouselScene({
           reduced={reduced}
         />
       ))}
+      <SceneWarmup onReady={onReady} onError={onError} />
     </Canvas>
   );
 }

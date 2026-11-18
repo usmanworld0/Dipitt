@@ -1,13 +1,24 @@
 ﻿'use client';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+export function LoadingScreen({
+  onComplete,
+  canFinish = true,
+}: {
+  onComplete: () => void;
+  canFinish?: boolean;
+}) {
   const root = useRef<HTMLDivElement>(null);
   const done = useRef(onComplete);
+  const allowed = useRef(canFinish);
+  useEffect(() => {
+    allowed.current = canFinish;
+  }, [canFinish]);
   const [percent, setPercent] = useState(0),
     [finished, setFinished] = useState(false);
   useEffect(() => {
     let cancelled = false;
+    let waiting: ReturnType<typeof setTimeout> | undefined;
     const progress = { value: 0 };
     const tween = gsap.to(progress, {
       value: 90,
@@ -27,7 +38,12 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
       ),
     ]).then(() => {
       if (cancelled) return;
-      tween.eventCallback('onComplete', () => {
+      const finish = () => {
+        if (cancelled) return;
+        if (!allowed.current) {
+          waiting = setTimeout(finish, 40);
+          return;
+        }
         gsap.to(progress, {
           value: 100,
           duration: 0.3,
@@ -44,11 +60,13 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
             });
           },
         });
-      });
+      };
+      tween.eventCallback('onComplete', finish);
       if (progress.value >= 90) tween.progress(0.999);
     });
     return () => {
       cancelled = true;
+      clearTimeout(waiting);
       tween.kill();
     };
   }, []);

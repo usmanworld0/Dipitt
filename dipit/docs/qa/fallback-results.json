@@ -1,8 +1,8 @@
 {
   "base": "http://127.0.0.1:3001",
   "checks": [
-    "WebGL-disabled homepage displays official DIPITT product photos",
-    "Fallback bottle opens its product page with a rendered-image fallback",
+    "WebGL-disabled homepage displays DIPITT 3D model renders",
+    "Fallback bottle opens its product page with its model-render poster",
     "Unknown routes return the branded 404 page"
   ]
 }

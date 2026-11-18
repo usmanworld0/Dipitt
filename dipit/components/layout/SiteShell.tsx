@@ -14,6 +14,7 @@ type SiteContextValue = {
   add: (id: string, size: number, quantity: number) => void;
   update: (id: string, size: number, quantity: number) => void;
   ready: boolean;
+  markHomeReady: () => void;
 };
 const SiteContext = createContext<SiteContextValue>(null!);
 export const useSite = () => useContext(SiteContext);
@@ -59,9 +60,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     pathname = usePathname();
   const [menu, setMenu] = useState(false),
     [ready, setReady] = useState(false),
+    [homeReady, setHomeReady] = useState(false),
     [bag, setBag] = useState<BagItem[]>([]),
     [hidden, setHidden] = useState(false),
     [light, setLight] = useState(false);
+  const markHomeReady = useCallback(() => setHomeReady(true), []);
   const transition = useRef<HTMLDivElement>(null),
     sharedBottle = useRef<HTMLImageElement>(null),
     sharedActive = useRef(false),
@@ -253,7 +256,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   }, [menu]);
   const studio = pathname === '/studio';
   return (
-    <SiteContext.Provider value={{ navigate, navigateProduct, bag, add, update, ready }}>
+    <SiteContext.Provider
+      value={{ navigate, navigateProduct, bag, add, update, ready, markHomeReady }}
+    >
       {!studio && (
         <>
           <a className="skip-link" href="#main">
@@ -343,7 +348,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <span>DIPITT</span>
           </div>
           <img ref={sharedBottle} className="shared-bottle" alt="" aria-hidden="true" />
-          <LoadingScreen onComplete={() => setReady(true)} />
+          <LoadingScreen
+            canFinish={pathname !== '/' || homeReady}
+            onComplete={() => setReady(true)}
+          />
         </>
       )}
     </SiteContext.Provider>
